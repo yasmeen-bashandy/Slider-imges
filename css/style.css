@@ -1,0 +1,24 @@
+.img-cap{
+    bottom: 10px;
+    width: 80%;
+    left: 10%;
+}
+#lightBoxContainer{
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left:0 ;
+    right: 0;
+    left: 0;
+}
+
+#lightBox{
+    background-image: url(../img/project-4.jpg);
+    width: 50%;
+    height: 500px;
+    background-size: cover;
+}
+#closeBtn,#prevBtn,#nextBtn{
+    cursor: pointer;
+}
