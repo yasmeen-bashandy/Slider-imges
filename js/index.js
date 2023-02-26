@@ -1,6 +1,8 @@
 var myImages=Array.from(document.querySelectorAll(".item img"));
+
 var lightBoxContainer=document.querySelector("#lightBoxContainer");
 var lightBox=document.querySelector("#lightBox");
+
 var closeBtn=document.querySelector("#closeBtn");
 var prevBtn=document.querySelector("#prevBtn");
 var nextBtn=document.querySelector("#nextBtn");
@@ -16,10 +18,11 @@ for(var i=0;i<myImages.length;i++){
         lightBoxContainer.classList.replace("d-none","d-flex");
         lightBox.style.backgroundImage=`url(${currentImgSrc})`;
     })
-    prevBtn.addEventListener("click",prevSlider);
-    nextBtn.addEventListener("click",nextSlider);
     closeBtn.addEventListener("click",closeSlider);
+    nextBtn.addEventListener("click",nextSlider);
+    prevBtn.addEventListener("click",prevSlider);
 }
+
 function closeSlider() {
     lightBoxContainer.classList.replace("d-flex","d-none");
 }
@@ -50,3 +53,13 @@ document.addEventListener("keyup",function(e){
             break;
     }
 })
+
+
+lightBox.addEventListener("click",function(e){
+    e.stopPropagation();
+})
+lightBoxContainer.addEventListener("click",function(e){
+    closeSlider();
+})
+
+

@@ -19,6 +19,12 @@
     height: 500px;
     background-size: cover;
 }
+
+@media screen and (max-width:700px){
+    #lightBox{
+        width: 100%;
+    }
+}
 #closeBtn,#prevBtn,#nextBtn{
     cursor: pointer;
 }
