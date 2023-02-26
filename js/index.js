@@ -6,6 +6,7 @@ var lightBox=document.querySelector("#lightBox");
 var closeBtn=document.querySelector("#closeBtn");
 var prevBtn=document.querySelector("#prevBtn");
 var nextBtn=document.querySelector("#nextBtn");
+
 var currentIndex=0;
 // console.log(myImages);
 for(var i=0;i<myImages.length;i++){
@@ -61,5 +62,4 @@ lightBox.addEventListener("click",function(e){
 lightBoxContainer.addEventListener("click",function(e){
     closeSlider();
 })
-
 
