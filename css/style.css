@@ -1,7 +1,11 @@
-.img-cap{
+/* .img-cap{
     bottom: 10px;
     width: 80%;
     left: 10%;
+} */
+
+body{
+    height: 100vh;
 }
 #lightBoxContainer{
     background-color: rgba(0, 0, 0, 0.8);
@@ -17,14 +21,39 @@
     background-image: url(../img/project-4.jpg);
     width: 50%;
     height: 500px;
+    /* max-height:500px; */
     background-size: cover;
+    background-position: center center;
+    /* cursor: grabbing; */
 }
 
-@media screen and (max-width:700px){
+
+@media screen and (min-width: 600px) and (max-width: 768px){
     #lightBox{
         width: 100%;
+        /* background-size: cover;
+        background-position: center center; */
     }
+   
+}
+@media screen and (max-width: 600px){
+    #lightBox{
+        width: 100%;
+        /* background-size: cover;
+        background-position: center center; */
+    }
+   
 }
 #closeBtn,#prevBtn,#nextBtn{
     cursor: pointer;
+}
+.item{
+    overflow: hidden;
+}
+.item img{
+    transition: all 0.5s ease-in-out;
+    box-shadow: 5px 5px 50px -1px rgba(0, 0, 0.8);
+}
+.item img:hover{
+transform: scale(1.1);
 }
